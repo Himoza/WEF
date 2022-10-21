@@ -47,7 +47,7 @@ function stop_p() {
 if [ "$(id -u)" == "0" ]; then
 	sleep 0.1
 
-	if [ -f "/opt/wef/wef.cnf" ]; then 
+	if [ -f "/opt/wef/wef.cnf" ]; then
 		# find the git repository directory from the well-known wef.cnf file location (in INI file format)
 		git_dir=$(awk -F "=" '/repo_dir/ {print $2}' /opt/wef/wef.cnf)
 	fi
@@ -147,7 +147,7 @@ if [ "$(id -u)" == "0" ]; then
 	fi
 
 	# Giving permissions to files
-	ln -s "${adir}src/WEF" /usr/bin/wef 2>/dev/null 
+	ln -s "${adir}src/WEF" /usr/bin/wef 2>/dev/null
 	cp src/WEF /opt/wef/wef 2>/dev/null
 	cp src/clear.sh /opt/wef/clear-logs.sh 2>/dev/null
 	cp src/uninstaller.sh /opt/wef/uninstaller.sh 2>/dev/null
